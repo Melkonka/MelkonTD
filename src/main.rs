@@ -13,6 +13,7 @@ use std::time::Duration;
 use amethyst::core::frame_limiter::FrameRateLimitStrategy;
 
 mod flyout_actions;
+mod game;
 mod game_state;
 mod hierarchy_lookup;
 mod input_system;
@@ -29,6 +30,10 @@ mod tower;
 mod z_layer;
 
 fn main() -> amethyst::Result<()> {
+  let mut game = game::Game::new();
+
+  game.run();
+
   amethyst::start_logger(Default::default());
 
   let app_root = application_root_dir()?;

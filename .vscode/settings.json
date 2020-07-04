@@ -1,6 +1,7 @@
 {
 	"files.exclude": 
 	{
-		"**/target": true
+		"**/target": true,
+		"**/3rd_party": true
 	}
 }
